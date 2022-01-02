@@ -1,1 +1,4 @@
-links: []
+links:
+  - title: Blog First Post
+    url: https://timokoola.dev/posts/hello-world/
+    desc: The very first blog post!
