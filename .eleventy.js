@@ -17,6 +17,9 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addWatchTarget("./src/sass");
+  eleventyConfig.addPassthroughCopy("./src/css")
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -47,7 +50,7 @@ module.exports = function (eleventyConfig) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }

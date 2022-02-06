@@ -1,14 +1,16 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy browsersync",
+    "watch:sass": "sass --watch src/sass:_site/static/css",
+    "build:sass": "sass src/sass:_site/static/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
-    "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css",
-    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
+    "build": "cross-env NODE_ENV=production npm-run-all build:* && cross-env NODE_ENV=production"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@tailwindcss/typography": "^0.3.1",
     "alpinejs": "^3.2.4",
@@ -25,6 +27,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1"
+    "postcss": "^8.2.1",
+    "sass": "^1.49.7"
   }
 }
