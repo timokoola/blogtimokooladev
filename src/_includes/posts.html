@@ -3,9 +3,9 @@ layout: default
 prism: true
 ---
 
-<div class="">
+<article class="post">
   <div class="">
-    <h1 class="">{{title}}</h1>
+    <h2 class="">{{title}}</h2>
     <p class="">
       <time>
         {{ date | readableDate }} by
@@ -13,5 +13,5 @@ prism: true
       </time>
     </p>
   </div>
-  <article class="">{{ content | safe }}</article>
-</div>
+  <p>{{ content | safe }}</p>
+</article>

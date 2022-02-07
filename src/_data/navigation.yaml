@@ -1,3 +1,7 @@
 items:
-  - text: Blog
+  - text: Archive
     url: /blog
+  - text: About
+    url: https://blog.timokoola.com/about
+  - text: Company Contact
+    url: https://blog.timokoola.com/about

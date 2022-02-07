@@ -1,28 +1,17 @@
-<div class="">
-    <nav class="">
-        <!--Logo etc-->
-        <div class="">
-            <a href="/" class="">
-                timokoola.dev</a>
-        </div>
+<nav class="">
+  <!--Toggle button (hidden on large screens)-->
+  <h1 class="title"><a href="/">timokoola<span class="dot">.</span>dev</a></h1>
 
-        <!--Toggle button (hidden on large screens)-->
-        
+  <!--Menu-->
+  {% if navigation.items %}
 
-        <!--Menu-->
-        <div class="">
+  <ul class="">
+    {% for item in navigation.items %}
+    <li class="">
+      <a href="{{ item.url }}">{{ item.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
-            {% if navigation.items %}
-
-                <ul class="">
-                    {% for item in navigation.items %}
-                        <li class="">
-                            <a class="" href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            {% endif %}
-        </div>
-    </nav>
-</div>
+  {% endif %}
+</nav>

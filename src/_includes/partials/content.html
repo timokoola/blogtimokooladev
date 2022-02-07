@@ -1,15 +1,19 @@
-<div class="">
-
-    {% if quicklinks.links %}
-
-        {% for item in quicklinks.links %}
-            <a href="{{item.url}}" target="_blank" class="">
-                <h3>{{item.title}}
-                    →</h3>
-                <p>{{item.desc}}</p>
-            </a>
-        {% endfor %}
-
-    {% endif %}
-
-</div>
+<section class="latest">
+  {% set postslist = collections.post %} {% for post in postslist | reverse %}
+  <div>
+    <h2 class="">
+      <a href="{{ post.url | url }}">
+        {% if post.data.title %} {{ post.data.title }} {% else %} Untitled {%
+        endif %}
+      </a>
+    </h2>
+    <p class="">
+      <time>
+        {{ post.date | readableDate }} by
+        <a>{{ post.data.author }}</a>
+      </time>
+    </p>
+    <article class="">{{ post.templateContent | safe }}</article>
+  </div>
+  {% endfor %}
+</section>
