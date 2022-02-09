@@ -20,12 +20,12 @@ Let's try it with a simple button counter example
 
 and that as code is surprisingly simple:
 
-```javascript
+{% highlight html %}
 <div x-data="{count: 0}">
     <button x-on:click="count = count + 1">Add</button>
     <div x-text="count"></div>
 </div>
-```
+{% endhighlight %}
 
 Yes, it feels positively jQuery like. From reading a tutorial to this in 15 minutes.
 
