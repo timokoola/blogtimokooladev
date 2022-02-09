@@ -10,7 +10,7 @@
     <p class="">
       <time>
         {{ post.date | readableDate }} by
-        <a>{{ post.data.author }}</a>
+        <span>{{ post.data.author }}</span>
       </time>
     </p>
     <article class="">{{ post.templateContent | safe }}</article>
