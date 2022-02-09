@@ -37,6 +37,7 @@ a.underline {
 }
 
 main {
+  max-width: calc(100vw - 2em);
   margin-top: var(--flow-space, 2em);
   margin-bottom: var(--flow-space, 2em);
 }
@@ -49,11 +50,9 @@ main:focus {
   text-decoration: none;
 }
 
-html,
 body {
-  height: 100%;
-}
-body {
+  overflow-x: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -268,6 +267,7 @@ ul {
     font-size: var(--size-600);
     max-width: 40ch;
   }
+
 
   .post time {
     font-size: var(--size-600);
