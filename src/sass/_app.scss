@@ -37,7 +37,7 @@ a.underline {
 }
 
 main {
-  max-width: calc(100vw - 2em);
+  max-width: calc(100vw - 1em);
   margin-top: var(--flow-space, 2em);
   margin-bottom: var(--flow-space, 2em);
 }
@@ -58,6 +58,12 @@ body {
 }
 .container {
   flex: 1 0 auto;
+  flex-direction: column;
+  width: 100%;
+  max-width: 120ch;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
 }
 .footer {
   flex-shrink: 0;
@@ -113,7 +119,8 @@ blockquote {
 }
 
 p,
-li {
+li,
+pre {
   max-width: 60ch;
 }
 
@@ -246,6 +253,10 @@ ul {
   font-size: var(--size-300);
 }
 
+pre {
+  max-width: calc(100% - 1em);
+}
+
 @media (min-width: 45em) {
   h1 {
     font-size: var(--size-900);
@@ -267,7 +278,6 @@ ul {
     font-size: var(--size-600);
     max-width: 40ch;
   }
-
 
   .post time {
     font-size: var(--size-600);
