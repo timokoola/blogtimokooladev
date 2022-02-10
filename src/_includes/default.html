@@ -83,14 +83,12 @@
     </div>
     {% include "./partials/footer.html" %} {% if path == "home" %}
 
-    <script src="//unpkg.com/alpinejs" defer></script>
-
     <!-- Netlify Identity Widget -->
     <!-- Needed only if you are using Netlify Identity feature -->
     <script
       type="text/javascript"
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
-    {% endif %}
+    {% endif %} {% include "./partials/alpinetags.html" %}
   </body>
 </html>

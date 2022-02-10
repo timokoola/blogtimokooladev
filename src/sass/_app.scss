@@ -73,8 +73,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: monospace;
   line-height: 1.3;
 }
 
@@ -155,6 +154,14 @@ h3 {
 
 .post :is(h2, h3) + * {
   --flow-space: var(--size-400);
+}
+
+article.latest-articles {
+  margin-top: var(--size-900);
+}
+
+p.timestamp {
+  margin-top: var(--size-300);
 }
 
 .post figure,
