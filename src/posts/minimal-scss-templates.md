@@ -5,6 +5,7 @@ author: Timo Koola
 date: 2022-02-22T05:18:20.903Z
 tags:
   - created
+  - post
 ---
 This is something I spotted yesterday and I wanted to have a permanent link back to them. 
 

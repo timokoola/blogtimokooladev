@@ -5,6 +5,7 @@ author: Timo Koola
 date: 2022-02-10
 tags:
   - created
+  - post
 ---
 
 The template I used to create the site basics included [Alpine.js](https://alpinejs.dev/) that according to their own words is:
