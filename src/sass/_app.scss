@@ -260,8 +260,9 @@ ul {
   font-size: var(--size-300);
 }
 
-pre {
-  max-width: calc(100% - 1em);
+pre,
+.cp_embed_wrapper {
+  max-width: 80ch;
 }
 
 @media (min-width: 45em) {
