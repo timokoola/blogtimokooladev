@@ -1,17 +1,22 @@
 <nav class="">
   <!--Toggle button (hidden on large screens)-->
-  <h1 class="title"><a href="/">timokoola<span class="dot">.</span>dev</a></h1>
+  <h1 class="title">
+    <a href="/">timokoola<span class="dot">.</span>dev</a>
+  </h1>
 
   <!--Menu-->
   {% if navigation.items %}
 
-  <ul class="">
-    {% for item in navigation.items %}
-    <li class="">
-      <a href="{{ item.url }}">{{ item.text }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+    <ul class="">
+      {% for item in navigation.items %}
+        <li class="">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
+      <li class="">
+        <a rel="me" href="https://indieweb.social/@timokoola">Mastodon</a>
+      </li>
+    </ul>
 
   {% endif %}
 </nav>
