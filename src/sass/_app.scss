@@ -94,6 +94,10 @@ h3 {
   font-size: var(--size-600);
 }
 
+h4 {
+  font-size: var(--size-500);
+}
+
 img {
   max-width: min(55rem, 100%);
 }
@@ -106,7 +110,7 @@ figcaption {
 }
 
 blockquote {
-  padding-left: var(--size-600);
+  padding-left: var(--size-400);
   border-left: 5px solid;
   font-style: italic;
   border-color: var(--light-amber);
